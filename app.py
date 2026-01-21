@@ -49,23 +49,5 @@ def submit_feedback():
         return jsonify({"success": False, "message": f"Database error: {str(e)}"}), 500
 
 
-@app.route("/all-feedback", methods=["GET"])
-def all_feedback():
-    try:
-        conn = get_db_connection()
-        cursor = conn.cursor(dictionary=True)
-
-        cursor.execute("SELECT * FROM feedback ORDER BY id DESC")
-        feedback_list = cursor.fetchall()
-
-        cursor.close()
-        conn.close()
-
-        return jsonify(feedback_list)
-
-    except Exception as e:
-        return jsonify({"success": False, "message": f"Database error: {str(e)}"}), 500
-
-
 if __name__ == "__main__":
     app.run(debug=True)

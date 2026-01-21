@@ -72,18 +72,3 @@ button:hover {
 hr {
   margin: 25px 0;
 }
-
-.feedback-card {
-  background: #f1f5ff;
-  padding: 12px;
-  border-radius: 10px;
-  margin-top: 12px;
-}
-
-.feedback-card h3 {
-  margin: 0;
-}
-
-.feedback-card p {
-  margin: 4px 0;
-}
