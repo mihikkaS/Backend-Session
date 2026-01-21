@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Feedback Form</h1>
+    <p class="sub">Tell us what you think.</p>
+
+    <form id="feedbackForm">
+      <label>Message</label>
+      <textarea id="message" placeholder="Write feedback..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <p id="responseMsg"></p>
+
+    <hr/>
+
+    <button id="loadBtn">Load All Feedback</button>
+
+    <div id="feedbackList"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
